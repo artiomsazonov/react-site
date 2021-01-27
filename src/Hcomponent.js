@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class Fcomponent extends Component {
+export default class Hcomponent extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,8 +11,8 @@ export default class Fcomponent extends Component {
   render() {
     return (
       <div>
-        <h1>Input:</h1>
-        <input value={this.props.input} onChange={this.props.handel}></input>
+        <h2>Render input</h2>
+        <p>{this.props.input}</p>
       </div>
     )
   }
