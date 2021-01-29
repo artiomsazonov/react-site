@@ -1,27 +1,28 @@
 import React, { Component } from 'react'
 import './stylesNew.css';
 import Fcomponent from "./Fcomponent";
-import Hcomponent from "./Hcomponent";
+//import Hcomponent from "./Hcomponent";
 
 
 export default class Ccomponent extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      inputValue: ""
+      name: "Button not pressed"
     };
-    this.handel = this.handel.bind(this)
+    this.updateData = this.updateData.bind(this)
   }
-  handel(event) {
+  updateData = (value) => {
     this.setState({
-      inputValue: event.target.value
+      name: value
     })
   }
   render() {
     return (
       <div className="container">
-        <Fcomponent input={this.state.inputValue} handel={this.handel} />
-        <Hcomponent input={this.state.inputValue} />
+        <p>State:{this.state.name}</p>
+        <Fcomponent updateData={this.updateData} />
+
       </div>
     )
   }
