@@ -1,9 +1,14 @@
 import React, { Component } from 'react'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import './stylesNew.css';
 import Home from "./Home";
 import About from "./About";
 import Users from "./Users";
-import { Link, Switch } from 'react-router-dom';
 
 
 export default class Ccomponent extends Component {
@@ -34,11 +39,19 @@ export default class Ccomponent extends Component {
             </ul>
           </nav>
           <Switch>
-
+            <Route path="/About">
+              <About />
+            </Route>
+            <Route path="/Users">
+              <Users />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
           </Switch>
         </div>
       </Router>
     )
   }
 }
-}
+
