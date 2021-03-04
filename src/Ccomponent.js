@@ -6,22 +6,19 @@ import {
   Link
 } from "react-router-dom";
 import './stylesNew.css';
-import Home from "./Home";
-import About from "./About";
-import Users from "./Users";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Users from "./pages/Users";
 
 
 export default class Ccomponent extends Component {
   constructor(props) {
     super(props)
     this.state = {
-
     };
   }
 
-
   render() {
-
     return (
       <Router>
         <div>
@@ -54,4 +51,3 @@ export default class Ccomponent extends Component {
     )
   }
 }
-
